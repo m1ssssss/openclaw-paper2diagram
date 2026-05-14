@@ -1,0 +1,16 @@
+{
+  "agent_name": "paper-review-diagram-agent",
+  "llm_provider": "gemini",
+  "llm_model_env": "GEMINI_MODEL",
+  "system_prompt_file": "app/prompts/agent_role.md",
+  "output_schema_file": "app/prompts/output_schema.md",
+  "tools": [
+    "pdf_reader",
+    "section_extractor",
+    "logic_distiller",
+    "prompt_translator",
+    "banana_renderer",
+    "paper_to_diagram"
+  ],
+  "tool_dispatcher": "app.openclaw.skill_registry:SkillRegistry.call"
+}
